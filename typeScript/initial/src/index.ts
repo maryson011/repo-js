@@ -7,4 +7,6 @@
 // import './tipos/funcoes_tipo'
 // import './tipos/objetos'
 // import './tipos/desafioProduto'
-import './tipos/tipoUniao'
+// import './tipos/tipoUniao'
+// import './tipos/never'
+import './tipos/null'
