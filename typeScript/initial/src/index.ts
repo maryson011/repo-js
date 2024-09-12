@@ -9,4 +9,5 @@
 // import './tipos/desafioProduto'
 // import './tipos/tipoUniao'
 // import './tipos/never'
-import './tipos/null'
+// import './tipos/null'
+import './tipos/desafioDoCapitulo'
