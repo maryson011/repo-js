@@ -4,7 +4,9 @@ Configuração
 --> npx tsc --init
 --> npm run build
 
-
+Configuração Test
+--> npm i -D jest ts-jest
+--> npm i -D @types/jest @types/node
 
 
 
