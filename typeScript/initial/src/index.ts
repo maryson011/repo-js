@@ -10,4 +10,7 @@
 // import './tipos/tipoUniao'
 // import './tipos/never'
 // import './tipos/null'
-import './tipos/desafioDoCapitulo'
+// import './tipos/desafioDoCapitulo'
+// import './oo/classe_1'
+// import './oo/classe_2'
+import './oo/classe_3'
