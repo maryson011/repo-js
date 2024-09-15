@@ -8,7 +8,7 @@ export default function Home() {
           flex flex-col justify-center items-center
           h-full w-full text-zinc-400
         `}>
-        <IconBrandReact size={200} stroke={1} />
+        <IconBrandReact size={200} stroke={1} className="animate-spin-slow"/>
         <span className="flex text-center text-xl font-black text-zinc-400">Curso fundamentos de React</span>
         <span className="flex text-center text-sm text-zinc-500">Aqui você vai aprende fundamentos solidos da biblioteca React</span>
       </div>

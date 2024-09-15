@@ -12,6 +12,9 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      animation: {
+        'spin-slow': 'spin 4s linear infinite', // Define uma animação de rotação mais lenta
+      },
     },
   },
   plugins: [],
