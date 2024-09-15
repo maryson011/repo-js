@@ -8,8 +8,8 @@ export default function Rodape(props: RodapeProps) {
     return (
         <div className="
                 flex justify-between items-center
-                h-12 rounded-xl p-2
-                bg-cyan-600
+                h-12 text-base px-10 bg-sinc-900
+                border-t border-zinc-700 text-zinc-500
             "
         >
             <span>{props.textoEsqueda}</span>

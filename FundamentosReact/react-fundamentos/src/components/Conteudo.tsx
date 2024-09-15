@@ -6,8 +6,8 @@ export default function Conteudo(props: ConteudoProps) {
     console.log(props)
     return (
         <div className="
-            flex justify-center items-center flex-1
-            bg-emerald-500 text-3xl rounded-md
+            flex items-start flex-1 p-4
+            bg-zinc-900 text-3xl
         ">
             {props.children}
         </div>
