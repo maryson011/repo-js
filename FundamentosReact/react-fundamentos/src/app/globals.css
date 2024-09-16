@@ -25,3 +25,12 @@ body {
     text-wrap: balance;
   }
 }
+
+@layer components {
+  .botao {
+    @apply bg-blue-500 px-4 py-2 text-white rounded-md
+  }
+  .campo {
+    @apply bg-black px-4 py-2 text-white rounded-sm w-[80%]
+  }
+}

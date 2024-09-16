@@ -5,7 +5,13 @@ import Conteudo from "./Conteudo";
 import Menu from "./Menu";
 import Rodape from "./Rodape";
 
-export default function Pagina(props: any) {
+interface PaginaProps {
+    titulo: string
+    subtitulo: string
+    children: any
+}
+
+export default function Pagina(props: PaginaProps) {
     return (
         <div className={`
             flex
