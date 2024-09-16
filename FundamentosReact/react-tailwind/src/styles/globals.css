@@ -24,4 +24,22 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .flex-center {
+    @apply flex justify-center items-center
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-md
+  }
+  .btn-info {
+    @apply btn bg-blue-500 hover:bg-blue-700
+  }
+  .btn-success {
+    @apply btn bg-green-400 hover:bg-green-600
+  }
+  .btn-error {
+    @apply btn bg-red-400 hover:bg-red-600
+  }
 }
