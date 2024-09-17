@@ -1,4 +1,4 @@
-import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert } from "@tabler/icons-react";
+import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert, IconSection } from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
 import Logo from "./Logo";
@@ -18,6 +18,7 @@ export default function MenuPrincipal() {
                 {titulo: "Maior", url: "/essenciais/maior", tag: "useEffect", icone: <IconMathGreater/>},
                 {titulo: "Contagem Caracteres Effect", url: "/essenciais/contagemCaracteresEffect", tag: "useEffect", icone: <IconLetterCase/>},
                 {titulo: "State Vas Referência", url: "/essenciais/stateVsRef", tag: "useRef", icone: <IconRefreshAlert/>},
+                {titulo: "Referênciando Elemento", url: "/essenciais/refElemento", tag: "useRef", icone: <IconSection/>},
             ],
         },
     ];
