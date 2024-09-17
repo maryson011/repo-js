@@ -6,6 +6,7 @@ import MenuPrincipalItem from "./MenuPrincipalItem";
 import MenuPrincipalSecao from "./MenuPrincipalSecao";
 import Flex from "./Flex";
 import { url } from "inspector";
+import useToggle from "@/data/hooks/useToggle";
 
 export default function MenuPrincipal() {
     const secoes = [
@@ -33,7 +34,8 @@ export default function MenuPrincipal() {
             ]
         }
     ];
-    const mini = false;
+
+    const [mini, toggleMine] = useToggle(false);
     function renderizarSecoes() {
         return secoes.map((secao: MenuSecao) => (
             <MenuPrincipalSecao key={secao.titulo} titulo={secao.titulo} mini={mini} aberta={secao.aberta}>
@@ -67,6 +69,9 @@ export default function MenuPrincipal() {
         >
             <Flex center className="m-7">
                 {!mini && <Logo />}
+                <div className="cursor-pointer" onClick={toggleMine}>
+                    {mini?<IconMenu />:<IconX />}
+                </div>
             </Flex>
             <nav className="flex flex-col gap-4 m-7">{renderizarSecoes()}</nav>
         </aside>
