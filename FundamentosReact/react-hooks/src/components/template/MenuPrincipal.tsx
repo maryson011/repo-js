@@ -1,16 +1,17 @@
-import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert, IconSection } from "@tabler/icons-react";
+import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert, IconSection, IconAppWindow } from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
 import Logo from "./Logo";
 import MenuPrincipalItem from "./MenuPrincipalItem";
 import MenuPrincipalSecao from "./MenuPrincipalSecao";
 import Flex from "./Flex";
+import { url } from "inspector";
 
 export default function MenuPrincipal() {
     const secoes = [
         {
             titulo: "Essenciais",
-            aberta: true,
+            aberta: false,
             itens: [
                 {titulo: "Contador", url: "/essenciais/contador", tag: "useState", icone: <IconNumbers/>},
                 {titulo: "Votação", url: "/essenciais/votacao", tag: "useState", icone: <IconUsers/>},
@@ -22,6 +23,13 @@ export default function MenuPrincipal() {
                 {titulo: "Contagem Caracteres", url: "/essenciais/contagemCaracteresRef", tag: "useRef", icone: <IconLetterCase/>},
             ],
         },
+        {
+            titulo:"Personalizados",
+            aberta: true,
+            itens: [
+                {titulo: "Modal", url: "/personalizados/modal", tag: "personalizados", icone: <IconAppWindow/>},
+            ]
+        }
     ];
     const mini = false;
     function renderizarSecoes() {
