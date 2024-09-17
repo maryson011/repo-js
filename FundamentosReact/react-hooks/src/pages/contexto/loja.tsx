@@ -5,11 +5,14 @@ import Flex from "@/components/template/Flex";
 import Pagina from "@/components/template/Pagina";
 import { createContext, useState } from "react";
 
-let Contexto = createContext({} as any)
+export let Contexto = createContext({} as any)
 
 export default function(){
-    const [carrinho, setCarrinho] = useState([])
-    const ctx = {carrinho, setCarrinho}
+    const [carrinho, setCarrinho] = useState<any>([])
+    const ctx = {carrinho, setCarrinho, total(){
+        const r = carrinho.reduce((acc: number, produto: any) => acc + +produto.preco, 0)
+        return r
+    }}
     return (
         <Contexto.Provider value={ctx}>
             <Pagina titulo="Loja" subtitulo="compartinhando informações entre multiplos componentes com contexto">
