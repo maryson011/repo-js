@@ -19,6 +19,7 @@ export default function MenuPrincipal() {
                 {titulo: "Contagem Caracteres Effect", url: "/essenciais/contagemCaracteresEffect", tag: "useEffect", icone: <IconLetterCase/>},
                 {titulo: "State Vas Referência", url: "/essenciais/stateVsRef", tag: "useRef", icone: <IconRefreshAlert/>},
                 {titulo: "Referênciando Elemento", url: "/essenciais/refElemento", tag: "useRef", icone: <IconSection/>},
+                {titulo: "Contagem Caracteres", url: "/essenciais/contagemCaracteresRef", tag: "useRef", icone: <IconLetterCase/>},
             ],
         },
     ];
