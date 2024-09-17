@@ -1,4 +1,4 @@
-import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert, IconSection, IconAppWindow, IconDimensions, IconLock } from "@tabler/icons-react";
+import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert, IconSection, IconAppWindow, IconDimensions, IconLock, IconShoppingCart } from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
 import Logo from "./Logo";
@@ -35,7 +35,14 @@ export default function MenuPrincipal() {
                 {titulo: "Tamanho Janela", url: "/personalizados/tamanhoJanela", tag: "personalizados", icone: <IconDimensions/>},
                 {titulo: "Validando Senha", url: "/personalizados/senha", tag: "personalizados", icone: <IconLock/>},
             ]
-        }
+        },
+        {
+            titulo:"Contexto",
+            aberta: true,
+            itens: [
+                {titulo: "Loja", url: "/contexto/loja", tag: "contexto", icone: <IconShoppingCart/>},
+            ]
+        },
     ];
 
     const [mini, toggleMine, miniTrue] = useBoolean(false);
