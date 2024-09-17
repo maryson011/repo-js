@@ -7,6 +7,9 @@ import MenuPrincipalSecao from "./MenuPrincipalSecao";
 import Flex from "./Flex";
 import { url } from "inspector";
 import useToggle from "@/data/hooks/useToggle";
+import useTamenhoJanela from "@/data/hooks/useTamanhoJanela";
+import { useEffect } from "react";
+import useBoolean from "@/data/hooks/useBoolean";
 
 export default function MenuPrincipal() {
     const secoes = [
@@ -35,7 +38,15 @@ export default function MenuPrincipal() {
         }
     ];
 
-    const [mini, toggleMine] = useToggle(false);
+    const [mini, toggleMine, miniTrue] = useBoolean(false);
+    let tamanho = useTamenhoJanela()
+
+    useEffect(()=>{
+        if (tamanho === "md" || tamanho === "sm") {
+            miniTrue()
+        }
+    }, [tamanho])
+
     function renderizarSecoes() {
         return secoes.map((secao: MenuSecao) => (
             <MenuPrincipalSecao key={secao.titulo} titulo={secao.titulo} mini={mini} aberta={secao.aberta}>
