@@ -1,4 +1,4 @@
-import { IconMenu, IconX, IconNumbers, IconUsers } from "@tabler/icons-react";
+import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight } from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
 import Logo from "./Logo";
@@ -14,6 +14,7 @@ export default function MenuPrincipal() {
             itens: [
                 {titulo: "Contador", url: "/essenciais/contador", tag: "useState", icone: <IconNumbers/>},
                 {titulo: "Votação", url: "/essenciais/votacao", tag: "useState", icone: <IconUsers/>},
+                {titulo: "Consulta a API", url: "/essenciais/consultaAPI", tag: "useEffect", icone: <IconArrowsLeftRight/>},
             ],
         },
     ];
