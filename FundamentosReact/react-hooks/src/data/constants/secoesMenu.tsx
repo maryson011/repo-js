@@ -1,4 +1,4 @@
-import { IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert, IconSection, IconAppWindow, IconDimensions, IconLock, IconShoppingCart } from "@tabler/icons-react";
+import { IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert, IconSection, IconAppWindow, IconDimensions, IconLock, IconShoppingCart, IconPin } from "@tabler/icons-react";
 
 export const secoes = [
     {
@@ -29,6 +29,13 @@ export const secoes = [
         aberta: false,
         itens: [
             {titulo: "Loja", url: "/contexto/loja", tag: "contexto", icone: <IconShoppingCart/>},
+        ]
+    },
+    {
+        titulo:"Outros",
+        aberta: true,
+        itens: [
+            {titulo: "Memorizando elementos", url: "/outros/memorizacao", tag: "useMemo", icone: <IconPin/>},
         ]
     },
 ];
