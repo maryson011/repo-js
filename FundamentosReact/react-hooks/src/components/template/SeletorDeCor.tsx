@@ -1,10 +1,10 @@
+import useTema from "@/data/hooks/useTema"
 import Botao from "./Botao"
 import Flex from "./Flex"
 
 export default function SeletorDeCor() {
-    const cores = ["red-400", "blue-500", "pink-500", "orange-500", "green-500"]
-
-    let listaCores = cores.map(cor=>{
+    let {cores} = useTema()
+    let listaCores = cores.map((cor: any)=>{
         return <Botao key={cor} cor={`bg-${cor}`} />
     })
 
