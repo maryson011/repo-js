@@ -36,6 +36,7 @@ export const secoes = [
         aberta: true,
         itens: [
             {titulo: "Memorizando elementos", url: "/outros/memorizacao", tag: "useMemo", icone: <IconPin/>},
+            {titulo: "Memorizando funções", url: "/outros/memorizandoFuncoes", tag: "useCallback", icone: <IconPin/>},
         ]
     },
 ];
