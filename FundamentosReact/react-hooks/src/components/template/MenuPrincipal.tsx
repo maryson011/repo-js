@@ -14,20 +14,11 @@ import useMenu from "@/data/hooks/useMenu";
 import { IconMenu, IconX } from "@tabler/icons-react";
 
 export default function MenuPrincipal() {
-    const {secoes} = useMenu()
-
-    const [mini, toggleMine, miniTrue] = useBoolean(false);
-    let tamanho = useTamenhoJanela()
-
-    useEffect(()=>{
-        if (tamanho === "md" || tamanho === "sm") {
-            miniTrue()
-        }
-    }, [tamanho])
+    const {secoes, mini, toggleMine, alternarSecao} = useMenu()
 
     function renderizarSecoes() {
         return secoes?.map((secao: MenuSecao) => (
-            <MenuPrincipalSecao key={secao.titulo} titulo={secao.titulo} mini={mini} aberta={secao.aberta}>
+            <MenuPrincipalSecao key={secao.titulo} titulo={secao.titulo} mini={mini} aberta={secao.aberta} onClick={()=>alternarSecao(secao)}>
                 {renderizarItens(secao)}
             </MenuPrincipalSecao>
         ));
@@ -42,6 +33,7 @@ export default function MenuPrincipal() {
                 tag={item.tag}
                 url={item.url}
                 mini={mini}
+                selecionado={item.selecionado}
             />
         ));
     }

@@ -1,6 +1,6 @@
 import { IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert, IconSection, IconAppWindow, IconDimensions, IconLock, IconShoppingCart } from "@tabler/icons-react";
 
-const secoes = [
+export const secoes = [
     {
         titulo: "Essenciais",
         aberta: false,
