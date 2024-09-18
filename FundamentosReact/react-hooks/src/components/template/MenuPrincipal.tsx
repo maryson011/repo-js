@@ -1,4 +1,4 @@
-import { IconMenu, IconX, IconNumbers, IconUsers, IconArrowsLeftRight, IconMathGreater, IconLetterCase, IconRefreshAlert, IconSection, IconAppWindow, IconDimensions, IconLock, IconShoppingCart } from "@tabler/icons-react";
+
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
 import Logo from "./Logo";
@@ -10,40 +10,11 @@ import useToggle from "@/data/hooks/useToggle";
 import useTamenhoJanela from "@/data/hooks/useTamanhoJanela";
 import { useEffect } from "react";
 import useBoolean from "@/data/hooks/useBoolean";
+import useMenu from "@/data/hooks/useMenu";
+import { IconMenu, IconX } from "@tabler/icons-react";
 
 export default function MenuPrincipal() {
-    const secoes = [
-        {
-            titulo: "Essenciais",
-            aberta: false,
-            itens: [
-                {titulo: "Contador", url: "/essenciais/contador", tag: "useState", icone: <IconNumbers/>},
-                {titulo: "Votação", url: "/essenciais/votacao", tag: "useState", icone: <IconUsers/>},
-                {titulo: "Consulta a API", url: "/essenciais/consultaAPI", tag: "useEffect", icone: <IconArrowsLeftRight/>},
-                {titulo: "Maior", url: "/essenciais/maior", tag: "useEffect", icone: <IconMathGreater/>},
-                {titulo: "Contagem Caracteres Effect", url: "/essenciais/contagemCaracteresEffect", tag: "useEffect", icone: <IconLetterCase/>},
-                {titulo: "State Vas Referência", url: "/essenciais/stateVsRef", tag: "useRef", icone: <IconRefreshAlert/>},
-                {titulo: "Referênciando Elemento", url: "/essenciais/refElemento", tag: "useRef", icone: <IconSection/>},
-                {titulo: "Contagem Caracteres", url: "/essenciais/contagemCaracteresRef", tag: "useRef", icone: <IconLetterCase/>},
-            ],
-        },
-        {
-            titulo:"Personalizados",
-            aberta: true,
-            itens: [
-                {titulo: "Modal", url: "/personalizados/modal", tag: "personalizados", icone: <IconAppWindow/>},
-                {titulo: "Tamanho Janela", url: "/personalizados/tamanhoJanela", tag: "personalizados", icone: <IconDimensions/>},
-                {titulo: "Validando Senha", url: "/personalizados/senha", tag: "personalizados", icone: <IconLock/>},
-            ]
-        },
-        {
-            titulo:"Contexto",
-            aberta: true,
-            itens: [
-                {titulo: "Loja", url: "/contexto/loja", tag: "contexto", icone: <IconShoppingCart/>},
-            ]
-        },
-    ];
+    const {secoes} = useMenu()
 
     const [mini, toggleMine, miniTrue] = useBoolean(false);
     let tamanho = useTamenhoJanela()
@@ -55,7 +26,7 @@ export default function MenuPrincipal() {
     }, [tamanho])
 
     function renderizarSecoes() {
-        return secoes.map((secao: MenuSecao) => (
+        return secoes?.map((secao: MenuSecao) => (
             <MenuPrincipalSecao key={secao.titulo} titulo={secao.titulo} mini={mini} aberta={secao.aberta}>
                 {renderizarItens(secao)}
             </MenuPrincipalSecao>
