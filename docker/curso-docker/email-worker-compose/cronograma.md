@@ -16,10 +16,11 @@
     - docker logs email-worker-compose-db-1
 [OK] - Aplicação para enfileirar as mensagens
 [OK] - Configurando um proxy reverso
-[] - Redes, dependências e banco de dados
+[OK] - Redes, dependências e banco de dados
     - docker logs email-worker-compose-app-1
     - docker compose exec db psql -U user -d email_sender -c 'select * from emails'
-[] - Fila e workes
+[OK] - Fila e workes
+    - docker compose logs -f -t
 [] - Escalar é preciso...
 [] - 12 Factors
     - The Twelve-Factor App
