@@ -21,7 +21,9 @@
     - docker compose exec db psql -U user -d email_sender -c 'select * from emails'
 [OK] - Fila e workes
     - docker compose logs -f -t
-[] - Escalar é preciso...
+[OK] - Escalar é preciso...
+    - docker compose up --build -d --scale worker=3
+    - docker compose logs -f -t worker
 [] - 12 Factors
     - The Twelve-Factor App
 [] - Sobreescrevendo localmente
