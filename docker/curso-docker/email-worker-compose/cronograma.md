@@ -24,6 +24,13 @@
 [OK] - Escalar é preciso...
     - docker compose up --build -d --scale worker=3
     - docker compose logs -f -t worker
-[] - 12 Factors
+[OK] - 12 Factors
     - The Twelve-Factor App
-[] - Sobreescrevendo localmente
+    - só adicinar as variaveis de ambiente e sobistituir os valores fixos (docker-compose -> enviroment)
+[OK] - Sobreescrevendo localmente
+    - docker-compose.override.yml:
+        version: '3'
+        services:
+            app:
+                environment:
+                    - DB_NAME=email_sender
