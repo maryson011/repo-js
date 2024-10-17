@@ -15,7 +15,7 @@
     - docker compose up --build -d
     - docker logs email-worker-compose-db-1
 [OK] - Aplicação para enfileirar as mensagens
-[] - Configurando um proxy reverso
+[OK] - Configurando um proxy reverso
 [] - Redes, dependências e banco de dados
 [] - Fila e workes
 [] - Escalar é preciso...
